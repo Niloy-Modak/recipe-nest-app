@@ -48,8 +48,9 @@ const NavbarII = () => {
                     </div>
                     <div className="navbar-center hidden lg:flex">
                         <ul className="menu menu-horizontal px-1 font-medium text-base ">
-                            <li className=''>
-                                <NavLink to='/' className={({ isActive }) => `${isActive ? "text-[#84BD00] pb-1 rounded-none border-b-4" : ""}`}>
+                            <li>
+                                <NavLink to='/' 
+                                className={({ isActive }) => `${isActive ? "text-[#84BD00] pb-1 rounded-none border-b-4" : ""}`}>
                                     Home
                                 </NavLink>
                             </li>

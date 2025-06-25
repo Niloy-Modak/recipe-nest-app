@@ -42,9 +42,9 @@ const SignUp = () => {
         createUser(email, password)
             .then(result => {
                 const user = result.user;
-                updateUser({ displayName: name, photoURL: photo }) //---
+                updateUser({ displayName: name, photoURL: photo }) 
                     .then(() => {
-                        setUser({ ...user, displayName: name, photoURL: photo }) //-----user
+                        setUser({ ...user, displayName: name, photoURL: photo }) 
                         navigate(`${location.state? location.state : "/"}`)
                         toast.success('Register successfully')
                     })

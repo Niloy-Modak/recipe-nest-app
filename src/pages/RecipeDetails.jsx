@@ -185,6 +185,7 @@ const RecipeDetails = () => {
 
                         {email === userEmail && (
                             <div className='bg-gray-300 p-3 rounded-xl my-3'>
+                                {/* delete */}
                                 <button className="mr-3.5 hover:bg-red-500 hover:text-green-100 cursor-pointer bg-red-400 rounded-full p-2 justify-center " onClick={() => handleDelete(_id)}>
                                     <MdDelete size={30} />
                                 </button>
@@ -194,7 +195,7 @@ const RecipeDetails = () => {
 
                                 <dialog id="my_modal_1" className="modal">
                                     <div className="modal-box w-[70%]">
-
+                                         {/*update  */}
                                         <form onSubmit={handleUpdate} className=''>
                                             <div className='grid grid-cols-1 gap-6 md:grid-cols-2'>
 
