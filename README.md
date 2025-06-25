@@ -29,9 +29,9 @@ Food Nest is a user-driven web application designed for discovering, sharing, an
 |--------|-------------------------|--------------------------------------|---------|
 | GET    | /recipes                | Fetch all products                  | Public  |
 | GET    | /recipes/:id            | Fetch single product by ID          | Public  |
-| POST   | /recipes                | Add new product                     | Admin   |
-| PUT    | /recipes/:id            | Update product by ID                | Admin   |
-| DELETE | /recipes/:id            | Delete product by ID                | Admin   |
+| POST   | /recipes                | Add new product                     | User   |
+| PUT    | /recipes/:id            | Update product by ID                | User   |
+| DELETE | /recipes/:id            | Delete product by ID                | User   |
 
 ## Installation
 
