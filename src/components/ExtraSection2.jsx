@@ -9,7 +9,7 @@ import { Fade } from "react-awesome-reveal";
 const ExtraSection2 = () => {
     return (
         <div className=''>
-            <div className='grid md:grid-cols-2 p-10 gap-12 w-[85%] md:w-[70%] mx-auto mt-14 bg-blue-200 rounded-2xl shadow-xs '>
+            <div className='grid md:grid-cols-2 p-10 gap-12 w-[85%]  mx-auto mt-14 bg-blue-200 rounded-2xl shadow-xs '>
                 <div className='flex flex-col justify-center gap-4'>
                     <Fade>
                         <h1 className='text-3xl text-base-50 md:text-4xl lg:text-5xl font-bold'>

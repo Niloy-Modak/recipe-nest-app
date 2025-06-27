@@ -4,9 +4,9 @@ import { Fade } from "react-awesome-reveal";
 
 const ExtraSection1 = () => {
     return (
-        <div>
+        <div className=''>
             <Fade>
-                <div className='w-[85%] lg:w-[70%] mx-auto my-14 md:my-24'>
+                <div className='w-[85%]  mx-auto my-14 md:my-24'>
                     <div className='flex flex-col md:flex-row gap-5 justify-between border-2 p-6 md:p-10 lg:p-14 rounded-4xl'>
                         <div className='flex flex-col gap-4 justify-center items-center'>
                             <div>
@@ -21,8 +21,8 @@ const ExtraSection1 = () => {
                             </div>
 
                         </div>
-                        <div className='md:w-1/2'>
-                            <img src={image1} className='w-full shadow-xs ' alt="" />
+                        <div className='md:w-1/2 flex flex-row-reverse'>
+                            <img src={image1} className='w-full lg:w-[460px] shadow-xs ' alt="" />
                         </div>
 
                     </div>

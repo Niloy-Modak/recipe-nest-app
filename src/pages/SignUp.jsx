@@ -28,7 +28,6 @@ const SignUp = () => {
     };
 
 
-
     const handleSignUp = (e) => {
         e.preventDefault();
         const from = e.target;
@@ -36,8 +35,6 @@ const SignUp = () => {
         const photo = from.photo.value;
         const email = from.email.value;
         const password = from.password.value;
-
-
 
         createUser(email, password)
             .then(result => {

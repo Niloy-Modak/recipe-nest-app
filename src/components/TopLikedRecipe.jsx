@@ -10,7 +10,7 @@ const TopLikedRecipes = ({ recipeData }) => {
     .slice(0, 6);
 
   return (
-    <section className="p-6 md:px-10 lg:px-16 w-[90%] md:w-[85%] lg:max-w-[1348px] mx-auto bg-blue-200 rounded-2xl shadow-xs mt-18">
+    <section className="p-6  md:px-10 lg:px-24 w-[90%] md:w-[85%] mx-auto bg-blue-200 rounded-2xl shadow-xs mt-18">
 
       <Fade>
         <h2 className="text-2xl md:text-3xl font-bold mb-6 md:mb-8 mt-6 lg:mb-12 text-center">Top Liked Recipes</h2>
@@ -21,7 +21,7 @@ const TopLikedRecipes = ({ recipeData }) => {
         </div>
      
       <div className="flex justify-center items-center mt-8">
-        <Link to='/all-recipes' className="btn btn-[#509E2F] rounded-full">
+        <Link to='/all-recipes' className="btn btn-primary rounded-full">
           View All Recipes
         </Link>
       </div>

@@ -6,7 +6,6 @@ import Logo from "../assets/logo-a1.png"
 import { AuthContext } from '../provider/AuthContext';
 import toast from 'react-hot-toast';
 import Swal from 'sweetalert2';
-import ThemeSwitcher from './ui/theme';
 
 const NavbarII = () => {
     const { user, logOut } = use(AuthContext)
@@ -77,9 +76,7 @@ const NavbarII = () => {
                         </ul>
                     </div>
 
-                    <div className="navbar-end">
-
-                        <ThemeSwitcher/>                   
+                    <div className="navbar-end">               
 
                         {
                             user ?
