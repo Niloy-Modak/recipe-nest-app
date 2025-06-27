@@ -4,7 +4,6 @@ import ErrorPage from "../pages/ErrorPage";
 import Home from "../pages/Home";
 import Loading from "../components/ui/Loading";
 import AllRecipes from "../pages/AllRecipes";
-import MyRecipe from "../pages/MyRecipe";
 import AddRecipe from "../pages/AddRecipe";
 import Login from "../pages/Login";
 import SignUp from "../pages/SignUp";
@@ -41,11 +40,6 @@ const Router = createBrowserRouter([
 
 
             },
-            // {
-            //     path: '/dashboard',
-            //     hHydrateFallback: Loading,
-            //     Component: Dashboard  
-            // },
             {
                 path: '/about-us',
                 hHydrateFallback: Loading,
@@ -68,13 +62,8 @@ const Router = createBrowserRouter([
 
                 element: <PrivertRoute><RecipeDetails /></PrivertRoute>,
 
-
             },
-            {
-                path: '/my-recipes',
-                element: <PrivertRoute><MyRecipe /></PrivertRoute>
-
-            },
+            
             {
                 path: '/add-recipes',
                 element: <PrivertRoute><AddRecipe /></PrivertRoute>,
@@ -100,12 +89,12 @@ const Router = createBrowserRouter([
     },
     {
         path: '/dashboard',
-        Component: DashboardLayout,
+        element: <PrivertRoute><DashboardLayout /></PrivertRoute>,
         HydrateFallback: Loading,
         children: [
             {
                 path: '/dashboard/My-Dashboard',
-                // loader: () => fetch('https://b11-a10-recipenest.vercel.app/recipes'),
+                loader: () => fetch('https://b11-a10-recipenest.vercel.app/recipes'),
                 HydrateFallback: Loading,
                 Component: Dashboard,
             },

@@ -22,13 +22,13 @@ const Footer = () => {
                         </NavLink>
                     </button>
                     <button className="link link-hover">
-                        <NavLink to='/add-recipes' className={({ isActive }) => `${isActive ? "pb-1 border-b-4" : ""}`}>
-                             Add Recipes
+                        <NavLink to='/about-us' className={({ isActive }) => `${isActive ? "pb-1 border-b-4" : ""}`}>
+                             About Us
                         </NavLink>
                     </button>
                     <button className="link link-hover">
-                        <NavLink to='/my-recipes' className={({ isActive }) => `${isActive ? "pb-1 border-b-4" : ""}`}>
-                            My Recipes
+                        <NavLink to='/support' className={({ isActive }) => `${isActive ? "pb-1 border-b-4" : ""}`}>
+                            Support
                         </NavLink>
                     </button>
 

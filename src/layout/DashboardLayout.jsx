@@ -3,6 +3,7 @@ import SideBar from '../components/SideBar';
 import { Outlet } from 'react-router';
 
 const DashboardLayout = () => {
+    
     return (
         <div className="flex min-h-screen">
             {/* Sidebar - fixed position */}

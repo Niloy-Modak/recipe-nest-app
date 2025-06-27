@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { Link, useRouteError } from 'react-router';
 import Footer from '../components/Footer';
 import errorImg from '../assets/errorPageLogo.png'
-import NavbarII from '../components/NavbarII';
+import NavBar from '../components/NavBar';
 
 const ErrorPage = () => {
     const error = useRouteError()
@@ -12,9 +12,9 @@ const ErrorPage = () => {
 
     return (
         <div>
-            <NavbarII/>
+            <NavBar/>
 
-            <div className='py-24 min-h-[calc(100vh-322px)]'>
+            <div className='py-24 mt-[98px] min-h-[calc(100vh-322px)]'>
                 <div className='flex flex-col md:flex-row justify-center items-center'>
                     <div className='px-4 text-center'>
                         

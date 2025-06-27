@@ -77,7 +77,7 @@ const RecipeDetails = () => {
                             }).then(() => {
 
                                 // Then navigate
-                                navigate('/all-recipes');
+                                navigate('/dashboard/my-recipes');
                             });
                         } else {
                             Swal.fire({
