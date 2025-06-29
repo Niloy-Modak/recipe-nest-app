@@ -38,7 +38,7 @@ Recipe Nest is a user-driven web application designed for discovering, sharing, 
 
 1. **Clone the repository:**
    ```bash
-   https://github.com/Niloy-Modak/food-nest-app.git
+   https://github.com/Niloy-Modak/recipe-nest-app.git
 
 2. **Navigate repository:**
    ```bash
