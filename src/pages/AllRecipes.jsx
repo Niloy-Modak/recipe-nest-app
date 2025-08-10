@@ -32,7 +32,7 @@ const AllRecipes = () => {
     };
 
     return (
-        <section className='w-[85%] mx-auto pb-16 pd:mb-20'>
+        <section className=' pb-16 pd:mb-20'>
             <h1 className='text-2xl md:text-3xl lg:text-4xl my-4 lg:my-8 font-bold text-[#509E2F] text-center'>All Recipes</h1>
 
             <div className='flex justify-end mb-6'>

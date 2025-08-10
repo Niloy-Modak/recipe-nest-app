@@ -6,7 +6,7 @@ const ExtraSection1 = () => {
     return (
         <div className=''>
             <Fade>
-                <div className='w-[85%]  mx-auto my-14 md:my-24'>
+                <div className='mx-auto my-14 md:my-24'>
                     <div className='flex flex-col md:flex-row gap-5 justify-between border-2 p-6 md:p-10 lg:p-14 rounded-4xl'>
                         <div className='flex flex-col gap-4 justify-center items-center'>
                             <div>

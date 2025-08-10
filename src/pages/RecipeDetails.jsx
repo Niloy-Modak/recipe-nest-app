@@ -123,9 +123,9 @@ const RecipeDetails = () => {
     }
 
     return (
-        <div className='w-[90%] mx-auto mb-16 md:mb-20'>
+        <div className='mb-16 md:mb-20'>
             <div className='p-4 relative'>
-                <div className="card border shadow-sm bg-[#e0eebf]">
+                <div className="card border border-green-600 shadow-sm bg-[#e0eebf]">
                     <figure className="px-10 pt-10">
                         <img
                             src={image}

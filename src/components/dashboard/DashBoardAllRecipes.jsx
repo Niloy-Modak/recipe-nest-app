@@ -7,50 +7,68 @@ const DashBoardAllRecipes = () => {
     return (
         <div>
             <h1 className='text-4xl font-bold text-center mt-4 mb-8'>All Recipes</h1>
-            <div className=' lg:w-[70%] mx-auto'>
-                <div className="overflow-x-auto ">
-                    <table className="table-auto border border-gray-300 w-full">
-                        <thead>
-                            <tr className='border-2 border-gray-400 bg-secondary text-white'>
-                                <th>Recipe </th>
-                                <th className='hidden md:table-cell'>Cuisine Type</th>
-                                <th>People liked</th>
-                                <th>View details</th>
+            <div className="lg:w-[90%] mx-auto">
+                <div className="overflow-x-auto rounded-lg shadow-md">
+                    <table className="min-w-full border border-gray-200 bg-white">
+                        <thead className="bg-green-600 text-white">
+                            <tr>
+                                <th className="px-6 py-3 text-left text-sm font-semibold">Recipe</th>
+                                <th className="px-6 py-3 text-left text-sm font-semibold hidden md:table-cell">
+                                    Cuisine Type
+                                </th>
+                                <th className="px-6 py-3 text-center text-sm font-semibold hidden md:table-cell">Preparation Time</th>
+                                <th className="px-6 py-3 text-center text-sm font-semibold hidden md:table-cell">People Liked</th>
+                                <th className="px-6 py-3 text-center text-sm font-semibold">View Details</th>
                             </tr>
                         </thead>
-                        <tbody>
+                        <tbody className="divide-y divide-gray-200">
                             {recipes.map((recipe) => (
-                                <tr key={recipe._id} className="border bg-white border-gray-400">
-                                    <td className="p-4 text-center w-64 border-gray-400">
-                                        <div className="flex items-center gap-3 justify-between">
+                                <tr
+                                    key={recipe._id}
+                                    className="hover:bg-gray-50 transition-colors"
+                                >
+                                    {/* Recipe + Image */}
+                                    <td className="px-6 py-4">
+                                        <div className="flex items-center gap-4">
                                             <img
-                                                src={recipe.image }
+                                                src={recipe.image}
                                                 alt={recipe.title}
-                                                className=" flex-1 w-16 h-16 object-cover rounded"
+                                                className="w-16 h-16 object-cover rounded-md shadow-sm"
                                             />
-                                            <span className="font-medium flex-1/2 ">{recipe.title}</span>
+                                            <span className="font-medium text-gray-800 line-clamp-2">
+                                                {recipe.title}
+                                            </span>
                                         </div>
                                     </td>
-                                    <td className="p-4 w-22 text-center border border-gray-400 hidden md:table-cell">
+
+                                    {/* Cuisine Type */}
+                                    <td className="px-6 py-4 hidden md:table-cell text-gray-600">
                                         {recipe.cuisine}
                                     </td>
-                                    <td className="p-4 w-22 text-center border border-gray-400">
+
+                                    {/* Likes */}
+                                    <td className="px-6 py-4 text-center hidden md:table-cell font-semibold text-gray-700">
+                                        {recipe.time || 0} min
+                                    </td>
+                                    <td className="px-6 py-4 text-center font-semibold text-gray-700 hidden md:table-cell">
                                         {recipe.likes || 0}
                                     </td>
-                                    <td className="p-4 w-22 text-center border border-gray-400">
-                                        <Link to={`/recipe/${recipe._id}`} className='hover:bg-secondary hover:text-white rounded-full py-2 px-4'>
+
+                                    {/* View Button */}
+                                    <td className="px-6 py-4 text-center">
+                                        <Link
+                                            to={`/recipe/${recipe._id}`}
+                                            className="inline-block bg-green-600 text-white px-4 py-2 rounded-full hover:bg-green-700 transition-colors"
+                                        >
                                             View
                                         </Link>
                                     </td>
                                 </tr>
                             ))}
-                            
                         </tbody>
                     </table>
                 </div>
             </div>
-
-
 
         </div>
     );

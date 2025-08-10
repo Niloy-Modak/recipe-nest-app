@@ -51,7 +51,7 @@ const AddRecipe = () => {
                     Add Recipes
                 </h1>
 
-                <div className='lg:w-[868px] md:w-[668px] w-[328px] mx-auto bg-white p-6 md:p-8 lg:p-12 rounded-2xl  '>
+                <div className='max-w-7xl w-full mx-auto bg-white p-6 md:p-8 lg:p-12 rounded-2xl'>
                     <form onSubmit={handleAddRecipe}>
                         <div className='grid grid-cols-1 gap-6 md:grid-cols-2'>
 

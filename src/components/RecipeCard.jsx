@@ -9,40 +9,52 @@ const RecipeCard = ({ recipe }) => {
 
     return (
         <div>
-            <Fade>
-                <div className="card bg-[#dfebc4] shadow-sm lg:h-[520px]">
-                    <figure className=" px-4 pt-4 lg:px-8 lg:pt-8">
+            <Fade className='flex justify-center'>
+                <div className="w-full max-w-sm bg-[#dfebc4] shadow-md rounded-lg overflow-hidden flex flex-col">
+
+                    {/* Image */}
+                    <div className="h-[240px] w-full p-4">
                         <img
                             src={image}
-                            alt="Shoes"
-                            className="rounded-xl object-cover w-full h-[240px] lg:h-[280px]" />
-                    </figure>
-                    <div className="card-body justify-between items-center space-y-1 text-center ">
-                        <h2 className="card-title text-2xl">
-                            {title}
-                        </h2>
+                            alt={title}
+                            className="w-full h-full object-cover rounded-lg"
+                        />
+                    </div>
 
-                        <div className='flex justify-center items-center gap-3 font-medium text-base'>
-                            <p className='text-[#509E2F] text-shadow-2xs'>Category :</p>
-                            {
-                                categories.map(category =>
-                                    <p key={category} >{category} ,</p>)
-                            }
+                    {/* Content */}
+                    <div className="flex-1 flex flex-col justify-between p-4 text-center">
+                        <div className="space-y-2">
+                            <h2 className="text-2xl font-bold line-clamp-2">
+                                {title}
+                            </h2>
+
+                            <div className="flex flex-wrap justify-center gap-1 text-base font-medium">
+                                <span className="text-[#509E2F]">Category:</span>
+                                {categories.map(category => (
+                                    <span key={category}>{category},</span>
+                                ))}
+                            </div>
+
+                            <div className="flex items-center justify-center gap-2 text-gray-600">
+                                <FaHeart size={20} className="text-red-500" />
+                                <span className="text-xl font-semibold">{likeCount}</span>
+                                <span>people interested</span>
+                            </div>
                         </div>
 
-                        <div className='flex items-center justify-center gap-3'>
-                            <FaHeart size={20} />
-                            <p className='text-xl'>{likeCount}</p>
-                            <p>people interested in this recipe</p>
+                        {/* Button */}
+                        <div className="mt-4">
+                            <Link
+                                to={`/recipe/${_id}`}
+                                className="block w-full bg-[#509E2F] text-white py-2 rounded-full text-center font-medium hover:bg-green-600 transition-colors"
+                            >
+                                View details
+                            </Link>
                         </div>
-                        <div className="card-actions flex justify-between items-center">
-                        <Link to={`/recipe/${_id}`} className="btn bg-[#509E2F] border-0 text-white hover:bg-green-600 rounded-full">
-                            View details
-                        </Link>
                     </div>
-                    </div>
-                    
                 </div>
+
+
             </Fade>
         </div>
     );

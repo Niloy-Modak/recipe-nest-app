@@ -3,46 +3,58 @@ import { Link } from 'react-router';
 import { FaHeart } from "react-icons/fa6";
 import { Fade } from 'react-awesome-reveal';
 
-const TopLikedRecipeCard = ({topRecipe}) => {
+const TopLikedRecipeCard = ({ topRecipe }) => {
 
     const { _id, title, image, categories, likeCount } = topRecipe
 
     return (
         <>
             <Fade>
-            <div className="card bg-base-100 shadow-sm">
-                <figure className=" px-4 pt-4 lg:px-8 lg:pt-8">
-                    <img
-                        src={image}
-                        alt="Shoes"
-                        className="rounded-xl object-cover h-[240px] lg:w-[426px] lg:h-[280px]" />
-                </figure>
-                <div className="card-body items-center space-y-1 text-center">
-                    <h2 className="card-title text-2xl">
-                        {title}
-                    </h2>
+                <div className="w-full max-w-sm bg-white shadow-md rounded-lg overflow-hidden flex flex-col ">
 
-                    <div className='flex gap-3 font-medium text-base'>
-                        <p className='text-[#509E2F] text-shadow-2xs'>Category :</p>
-                        {
-                            categories.map(category =>
-                                <p key={category} >{category} ,</p>)
-                        }
+                    {/* Image */}
+                    <div className="h-[240px] w-full">
+                        <img
+                            src={image}
+                            alt={title}
+                            className="w-full h-full object-cover"
+                        />
                     </div>
 
-                    <div className='flex items-center justify-center gap-3'>
-                        <FaHeart size={20}/>
-                        <p className='text-xl'>{likeCount}</p>
-                        <p>people interested in this recipe</p>
-                    </div>
+                    {/* Content */}
+                    <div className="flex-1 flex flex-col justify-between p-4 text-center">
+                        <div className="space-y-2">
+                            <h2 className="text-2xl font-bold line-clamp-2">
+                                {title}
+                            </h2>
 
-                    <div className="card-actions">
-                        <Link to={`/recipe/${_id}`} className="btn bg-[#509E2F] border-0 text-white hover:bg-green-600 rounded-full">
-                            View details
-                        </Link>
+                            <div className="flex flex-wrap justify-center gap-1 text-base font-medium">
+                                <span className="text-[#509E2F]">Category:</span>
+                                {categories.map(category => (
+                                    <span key={category}>{category},</span>
+                                ))}
+                            </div>
+
+                            <div className="flex items-center justify-center gap-2 text-gray-600">
+                                <FaHeart size={20} className="text-red-500" />
+                                <span className="text-xl font-semibold">{likeCount}</span>
+                                <span>people interested</span>
+                            </div>
+                        </div>
+
+                        {/* Button */}
+                        <div className="mt-4">
+                            <Link
+                                to={`/recipe/${_id}`}
+                                className="block w-full bg-[#509E2F] text-white py-2 rounded-full text-center font-medium hover:bg-green-600 transition-colors"
+                            >
+                                View details
+                            </Link>
+                        </div>
                     </div>
                 </div>
-            </div>
+
+
             </Fade>
         </>
     );
