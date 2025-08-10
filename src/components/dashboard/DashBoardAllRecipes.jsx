@@ -1,8 +1,12 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Link, useLoaderData } from 'react-router';
 
 const DashBoardAllRecipes = () => {
     const recipes = useLoaderData()
+
+    useEffect(() => {
+           document.title = 'DashBoard Recipes';
+       }, []);
 
     return (
         <div>

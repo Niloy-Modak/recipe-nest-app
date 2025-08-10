@@ -1,4 +1,4 @@
-import React, { use, useMemo } from 'react';
+import React, { use, useEffect, useMemo } from 'react';
 import { useLoaderData } from 'react-router';
 import {
     PieChart,
@@ -29,6 +29,10 @@ const Dashboard = () => {
 
         return Object.entries(countMap).map(([name, value]) => ({ name, value }));
     }, [recipes]);
+
+     useEffect(() => {
+        document.title = 'My Dashboard';
+    }, []);
 
     return (
         <div className="p-4 md:p-6">
