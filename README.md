@@ -1,6 +1,6 @@
 # Project Overview 
-<h3>Website name:  Food Nest</h3>
-Food Nest is a user-driven web application designed for discovering, sharing, and exploring food recipes. The platform allows users to create an account, log in, and contribute their own unique recipes. In return, they gain access to a growing community of food enthusiasts and a wide collection of recipes submitted by others.
+<h3>Website name:  Recipe Nest</h3>
+Recipe Nest is a user-driven web application designed for discovering, sharing, and exploring food recipes. The platform allows users to create an account, log in, and contribute their own unique recipes. In return, they gain access to a growing community of food enthusiasts and a wide collection of recipes submitted by others.
 
 
 ## Live Demo
@@ -38,7 +38,7 @@ Food Nest is a user-driven web application designed for discovering, sharing, an
 
 1. **Clone the repository:**
    ```bash
-   https://github.com/Niloy-Modak/food-nest-app.git
+   https://github.com/Niloy-Modak/recipe-nest-app.git
 
 2. **Navigate repository:**
    ```bash
